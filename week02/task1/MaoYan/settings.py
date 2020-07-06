@@ -56,9 +56,16 @@ DEFAULT_REQUEST_HEADERS = {
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'MaoYan.middlewares.MaoyanDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+    'maoyanmovie.middlewares.MaoyanmovieDownloaderMiddleware': 543,
+    'maoyanmovie.middlewares.RandomHttpProxyMiddleware': 400,
+}
+
+HTTP_PROXY_LIST = [
+     'http://207.180.215.74:3128',
+     'http://118.69.50.154:443',
+     'http://110.37.231.92:8080',
+]
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html

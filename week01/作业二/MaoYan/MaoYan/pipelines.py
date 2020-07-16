@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import pandas as pd
+import csv
 
 
 class MaoyanPipeline(object):
@@ -21,6 +21,7 @@ class MaoyanPipeline(object):
 
     def close_spider(self,spider):
         print(self.movie_dic)
-        movies = pd.DataFrame(self.movie_dic)
-        movies.to_csv('../movies.csv', encoding='utf-8-sig')
+        with open ('../movies.csv', 'w', encoding='utf-8-sig') as f1:
+            writer = csv.DictWriter()
+            writer.writerows(self.movie_dic)
         print('finished!')

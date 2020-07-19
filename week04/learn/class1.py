@@ -34,3 +34,14 @@ mask = email.map(lambda x:bool(re.match(pattern,x)))
 print(mask)
 print(email[mask])
 
+
+# DataFrame
+import pandas as pd
+import numpy as np
+# 1.创建DataFrame对象
+## 1.1 通过字典数据创建
+
+data = {
+    '武汉':
+}
+df = pd.DataFrame()

@@ -1,4 +1,7 @@
 学习笔记
+# 字符串和整数之间的装换
+    ord('a')
+    chr(97)
 # pandas
 ## pandas基础数据类型
 ### Series
@@ -72,3 +75,8 @@ print(email[mask])
 #   如果index完全随机，则每次查询都要扫描表，查询性能为0(n)
 ```
 ### DataFrame
+```python
+# 创建DataFrame对象
+```
+
+# 数据预处理
